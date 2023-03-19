@@ -1,17 +1,31 @@
-﻿using Models;
+﻿using Microsoft.EntityFrameworkCore;
+using Models;
+using SQLiteDatabase;
+using System;
+using System.Threading.Tasks;
 
 namespace Services
 {
     public class CustomerService : ICustomerService
     {
-        public void Add(Customer customer)
+        private readonly ParlemDbContext dbContext;
+
+        public CustomerService(ParlemDbContext dbContext)
         {
-            throw new NotImplementedException();
+
+            this.dbContext = dbContext; //new ParlemDbContext();
         }
 
-        public Customer GetById(int id)
+        public async void Add(Customer customer)
         {
-            throw new NotImplementedException();
+            await dbContext.Customers.AddAsync(customer);
+            await dbContext.SaveChangesAsync();
+        }
+
+        public Customer? GetById(int id)
+        {
+            Customer? customer = dbContext.Customers.SingleOrDefault(x=>x.Id==id);
+            return customer;
         }
     }
 }

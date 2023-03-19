@@ -2,13 +2,14 @@
 
 namespace SQLiteDatabase
 {
+    //TODO Cambiar la estructura y nombre. no es una conexion, es una utilidad, ponerla estatica
     public class ParlemConnection
     {
         private readonly SQLiteConnection con;
 
         public ParlemConnection()
         {
-            con = new("Data Source=parlem.db");
+            con = new("Data Source=/usr/local/bin/parlem.db");
             con.Open();
 
             CreateTableCustomers();
