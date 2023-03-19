@@ -2,14 +2,14 @@
 
 namespace Services
 {
-    public class CustomerService
+    public class CustomerService : ICustomerService
     {
-        public void Add(Customer customer) 
+        public void Add(Customer customer)
         {
             throw new NotImplementedException();
         }
 
-        public Customer GetById(int id) 
+        public Customer GetById(int id)
         {
             throw new NotImplementedException();
         }
