@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Models", "Models\Models.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services", "Services\Services.csproj", "{F38EFB80-5608-46B2-99C6-5BB75EA9E3EF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SQLiteDatabase", "SQLiteDatabase\SQLiteDatabase.csproj", "{0B30154F-EA63-4E4B-A8BE-E558C62FB0F1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{F38EFB80-5608-46B2-99C6-5BB75EA9E3EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F38EFB80-5608-46B2-99C6-5BB75EA9E3EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F38EFB80-5608-46B2-99C6-5BB75EA9E3EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B30154F-EA63-4E4B-A8BE-E558C62FB0F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B30154F-EA63-4E4B-A8BE-E558C62FB0F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B30154F-EA63-4E4B-A8BE-E558C62FB0F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B30154F-EA63-4E4B-A8BE-E558C62FB0F1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
