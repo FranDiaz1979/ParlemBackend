@@ -22,7 +22,7 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 app.MapControllers();
 
-var basedatos = new ParlemConnection();
+ParlemDatabase.Create();
 
 app.Run();
 
