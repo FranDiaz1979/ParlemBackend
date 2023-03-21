@@ -19,13 +19,6 @@ namespace WebApi.Controllers
             this.productService = productService;
         }
 
-        //// GET: api/Customers
-        //[HttpGet]
-        //public IEnumerable<string> Get()
-        //{
-        //    return new string[] { "value1", "value2" };
-        //}
-
         // GET api/Customers/5
         [HttpGet("{id}")]
         public ActionResult Get(int id)
@@ -43,23 +36,5 @@ namespace WebApi.Controllers
             string json = JsonSerializer.Serialize(products);            
             return Ok(json);
         }
-
-        //// POST api/Customers
-        //[HttpPost]
-        //public void Post([FromBody] string value)
-        //{
-        //}
-
-        //// PUT api/Customers/5
-        //[HttpPut("{id}")]
-        //public void Put(int id, [FromBody] string value)
-        //{
-        //}
-
-        //// DELETE api/Customers/5
-        //[HttpDelete("{id}")]
-        //public void Delete(int id)
-        //{
-        //}
     }
 }

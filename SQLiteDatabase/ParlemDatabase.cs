@@ -87,7 +87,7 @@ namespace SQLiteDatabase
             cmd.ExecuteNonQuery();
 
             cmd.Parameters.Clear();
-            cmd.Parameters.AddWithValue("@name", "Telèfon fixe Mejorola");
+            cmd.Parameters.AddWithValue("@name", "Telefon fixe Mejorola");
             cmd.Parameters.AddWithValue("@type", "tf");
             cmd.ExecuteNonQuery();
         }
