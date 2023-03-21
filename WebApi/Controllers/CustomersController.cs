@@ -39,7 +39,7 @@ namespace WebApi.Controllers
         [HttpGet("{id}/Products")]
         public ActionResult GetProducts(int id)
         {
-            var products = productService.GetCustomerList(id);
+            var products = productService.GetListByCustomerId(id);
             string json = JsonSerializer.Serialize(products);            
             return Ok(json);
         }

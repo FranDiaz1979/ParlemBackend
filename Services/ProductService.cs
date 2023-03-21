@@ -1,4 +1,5 @@
 ﻿using Models;
+using SQLiteDatabase;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,14 +10,23 @@ namespace Services
 {
     public class ProductService : IProductService
     {
-        public void Add(Product product)
+        private readonly ParlemDbContext dbContext;
+
+        public ProductService(ParlemDbContext dbContext)
         {
-            throw new NotImplementedException();
+            this.dbContext = dbContext;
         }
 
-        public IEnumerable<Product> GetCustomerList(int customerId)
+        public async void Add(Product product)
         {
-            throw new NotImplementedException();
+            await dbContext.Products.AddAsync(product);
+            await dbContext.SaveChangesAsync();
+        }
+
+        public IEnumerable<Product> GetListByCustomerId(int customerId)
+        {
+            IEnumerable<Product> products = dbContext.Sales.Where(x => x.CustomerId == customerId).Select(x=>x.Product);
+            return products;
         }
     }
 }

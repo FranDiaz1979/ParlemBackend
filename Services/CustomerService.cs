@@ -13,7 +13,7 @@ namespace Services
         public CustomerService(ParlemDbContext dbContext)
         {
 
-            this.dbContext = dbContext; //new ParlemDbContext();
+            this.dbContext = dbContext;
         }
 
         public async void Add(Customer customer)

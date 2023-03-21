@@ -2,7 +2,6 @@
 
 namespace SQLiteDatabase
 {
-    //TODO Cambiar la estructura y nombre. no es una conexion, es una utilidad, ponerla estatica
     public static class ParlemDatabase
     {
         public static void Create()
@@ -23,8 +22,6 @@ namespace SQLiteDatabase
 
             CreateTableSales(connection);
             InitializeTableSales(connection);
-
-            //TODO Create and initialize table Products
         }
 
         private static void CreateTableCustomers(SQLiteConnection connection)
