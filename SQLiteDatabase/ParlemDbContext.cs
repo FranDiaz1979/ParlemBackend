@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
 using Models;
 using System;
 using System.Collections.Generic;
@@ -11,7 +12,6 @@ namespace SQLiteDatabase
 {
     public class ParlemDbContext : DbContext 
     {
-
         public ParlemDbContext(DbContextOptions<ParlemDbContext> options)
             : base(options)
         {

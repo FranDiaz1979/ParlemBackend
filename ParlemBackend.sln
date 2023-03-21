@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33205.214
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi", "WebApi\WebApi.csproj", "{2FD2864A-A616-41E8-82FB-561DCED49C29}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApi", "WebApi\WebApi.csproj", "{2FD2864A-A616-41E8-82FB-561DCED49C29}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Models", "Models\Models.csproj", "{18491D9E-B662-407F-BA63-F78CA537EEC6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Models", "Models\Models.csproj", "{18491D9E-B662-407F-BA63-F78CA537EEC6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services", "Services\Services.csproj", "{F38EFB80-5608-46B2-99C6-5BB75EA9E3EF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Services", "Services\Services.csproj", "{F38EFB80-5608-46B2-99C6-5BB75EA9E3EF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SQLiteDatabase", "SQLiteDatabase\SQLiteDatabase.csproj", "{0B30154F-EA63-4E4B-A8BE-E558C62FB0F1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SQLiteDatabase", "SQLiteDatabase\SQLiteDatabase.csproj", "{0B30154F-EA63-4E4B-A8BE-E558C62FB0F1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntegrationTests", "Tests\IntegrationTests.csproj", "{03923CAC-9AFF-4F3E-9DED-31AA67997E0F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{0B30154F-EA63-4E4B-A8BE-E558C62FB0F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0B30154F-EA63-4E4B-A8BE-E558C62FB0F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0B30154F-EA63-4E4B-A8BE-E558C62FB0F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03923CAC-9AFF-4F3E-9DED-31AA67997E0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03923CAC-9AFF-4F3E-9DED-31AA67997E0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03923CAC-9AFF-4F3E-9DED-31AA67997E0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03923CAC-9AFF-4F3E-9DED-31AA67997E0F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

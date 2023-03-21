@@ -4,14 +4,20 @@ namespace SQLiteDatabase
 {
     public static class ParlemDatabase
     {
+
         public static void Create()
         {
-            if (File.Exists("/usr/local/bin/parlem.db"))
+            Create("/usr/local/bin/parlem.db");
+        }
+
+        public static void Create(string databaseName)
+        {
+            if (File.Exists(databaseName))
             {
                 return;
             }
 
-            SQLiteConnection connection = new("Data Source=/usr/local/bin/parlem.db");
+            SQLiteConnection connection = new("Data Source=" + databaseName);
             connection.Open();
 
             CreateTableCustomers(connection);
@@ -54,13 +60,22 @@ namespace SQLiteDatabase
             cmd.Parameters.AddWithValue("@familyName", "Parlem");
             cmd.Parameters.AddWithValue("@phone", "668668668");
             cmd.ExecuteNonQuery();
-            
+
             cmd.Parameters.Clear();
             cmd.Parameters.AddWithValue("@docType", "nif");
             cmd.Parameters.AddWithValue("@docNum", "12345678A");
             cmd.Parameters.AddWithValue("@email", "it@parlem.com");
             cmd.Parameters.AddWithValue("@givenName", "Franchesca");
             cmd.Parameters.AddWithValue("@familyName", "Tívoli");
+            cmd.Parameters.AddWithValue("@phone", "no quiere darlo");
+            cmd.ExecuteNonQuery();
+            
+            cmd.Parameters.Clear();
+            cmd.Parameters.AddWithValue("@docType", "nif");
+            cmd.Parameters.AddWithValue("@docNum", "12222222A");
+            cmd.Parameters.AddWithValue("@email", "it@parlem.com");
+            cmd.Parameters.AddWithValue("@givenName", "Orlando");
+            cmd.Parameters.AddWithValue("@familyName", "Boom");
             cmd.Parameters.AddWithValue("@phone", "no quiere darlo");
             cmd.ExecuteNonQuery();
         }
@@ -101,7 +116,7 @@ namespace SQLiteDatabase
                 "SoldAt DATETIME, " +
                 "ProductId INTEGER, " +
                 "CustomerId INTEGER)";
-                // Client don’t mention price, maybe it’s a private data
+            // Client don’t mention price, maybe it’s a private data
             cmd.ExecuteNonQuery();
         }
 
@@ -113,14 +128,14 @@ namespace SQLiteDatabase
                 "VALUES (@terminalId, @soldAt, @productId, @customerId)";
 
             cmd.Parameters.AddWithValue("@terminalId", 3);
-            cmd.Parameters.AddWithValue("@soldAt", new DateTime(2022,10,25));
+            cmd.Parameters.AddWithValue("@soldAt", new DateTime(2022, 10, 25));
             cmd.Parameters.AddWithValue("@productId", 1);
             cmd.Parameters.AddWithValue("@customerId", 1);
             cmd.ExecuteNonQuery();
 
             cmd.Parameters.Clear();
             cmd.Parameters.AddWithValue("@terminalId", 5);
-            cmd.Parameters.AddWithValue("@soldAt", new DateTime(2023,03,20));
+            cmd.Parameters.AddWithValue("@soldAt", new DateTime(2023, 03, 20));
             cmd.Parameters.AddWithValue("@productId", 2);
             cmd.Parameters.AddWithValue("@customerId", 1);
             cmd.ExecuteNonQuery();
