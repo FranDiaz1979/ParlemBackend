@@ -1,16 +1,20 @@
 # Parlem Backend
 
-Api Rest 
-.Net 6 (LTS)
-Arquitectura N-capas (mi preferida). Logica de negocio en Services y persistencia en SQLiteDatabase.
-SqLite
-Entity Framework Core
-Contenerizado en docker
-Inyeccion de dependencias
-Tests de Integración con NUnit
-TO-DO: Test unitarios (ver otros repositorios)
-No Aplica: Test de UI con Selenium (ver otros repositorios)
-TO-DO: Pasar SonarQube
+Prueba técnica consistente en hacer una api que devuelva los datos de 1 cliente y los productos que ha comprado en diferente end-points
+
+## Stack
+
+* Api Rest 
+* .Net 6 (LTS)
+* Arquitectura N-capas (mi preferida). Logica de negocio en Services y persistencia en SQLiteDatabase.
+* SqLite
+* Entity Framework Core
+* Contenerizado en docker
+* Inyeccion de dependencias
+* Tests de Integración con NUnit
+* TO-DO: Test unitarios (ver otros repositorios)
+* TO-DO: Pasar SonarQube
+* No Aplica: Test de UI con Selenium (ver otros repositorios)
 
 ## Setup
 
